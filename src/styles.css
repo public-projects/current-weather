@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+html ,body {
+  font-family: 'Courgette', cursive;
+  background-image: url(https://c.pxhere.com/photos/d4/36/clouds_sky_blue_white_summer_day_sunny_day_sunny_sun-833927.jpg!d);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #1e5ab2;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding-right: 7px;
+}
+
+
+/* div {
+  width: 100%;
+  height: 400px;
+  background-image: url('img_flowers.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid red;
+} */

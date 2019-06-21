@@ -1,0 +1,83 @@
+<p-messages [(value)]="msgs"></p-messages>
+
+
+<p-carousel
+[value]="locationsList"
+headerText="Current Weather"
+styleClass="carousel"
+circular="circular"
+pageLinks="7"
+numVisible="6"
+>
+<ng-template let-location pTemplate="location">
+  <div class="ui-grid ui-grid-responsive">
+    <div
+    class="ui-grid-row location-header"
+    [ngClass]="
+    location.main.temp >= 15.45 ? 'sunny-weather' : 'cloudy-weather'
+    "
+    >
+    <div class="ui-grid-col-12">{{ location.name | titlecase }}</div>
+      </div>
+
+      <div
+        class="ui-grid-row"
+        [ngClass]="
+          location.main.temp >= 15.45 ? 'sunny-weather' : 'cloudy-weather'
+        "
+      >
+        <!-- img list -->
+        <ul
+          *ngIf="location.weather"
+          style="list-style-type: none;"
+          class="ui-grid-col-1"
+        >
+          <li *ngFor="let weather of location.weather">
+            <div>{{ weather.description | titlecase }}</div>
+            <div>
+              <img
+                src="https://openweathermap.org/img/w/{{ weather.icon }}.png"
+                alt="error"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="ui-grid-row"
+        [ngClass]="
+          location.main.temp >= 15.45 ? 'sunny-weather' : 'cloudy-weather'
+        "
+      >
+        <div class="ui-grid-col-6">Temp</div>
+        <div class="ui-grid-col-6">{{ location.main.temp }}</div>
+      </div>
+      <div
+        class="ui-grid-row"
+        [ngClass]="
+          location.main.temp >= 15.45 ? 'sunny-weather' : 'cloudy-weather'
+        "
+      >
+        <div class="ui-grid-col-6">Humidity</div>
+        <div class="ui-grid-col-6">{{ location.main.humidity }}</div>
+      </div>
+      <div
+        class="ui-grid-row"
+        [ngClass]="
+          location.main.temp >= 15.45 ? 'sunny-weather' : 'cloudy-weather'
+        "
+      >
+        <div class="ui-grid-col-12">
+          <button
+            type="button"
+            pButton
+            icon="pi pi-plus-circle"
+            (click)="addToFavorites(location)"
+            label="Add"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

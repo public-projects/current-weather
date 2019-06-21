@@ -1,0 +1,31 @@
+
+:host /deep/ .location-header {
+  color: black!important;
+  font-weight: bolder!important;
+}
+:host /deep/ .ui-widget {
+  font-family: 'Courgette', cursive!important;
+
+}
+
+p-carousel .ui-grid {
+
+  background-color: blue;
+  color: black;
+  padding: 2px;
+
+}
+.sunny-weather {
+  color: #800000;
+  background-color: rgb(255, 187, 62);
+}
+
+.cloudy-weather {
+  color: rgb(7, 7, 17);
+  /* color: blue; */
+  background-color: rgb(92, 127, 255);
+
+}
+.ui-grid-row{
+  padding: 1px;
+}

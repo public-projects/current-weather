@@ -1,0 +1,9 @@
+html, body {
+  height: 100%;
+}
+.nav-button {
+  margin: 8px !important;
+}
+:host /deep/ .ui-button-text {
+  font-family: 'Courgette', cursive!important;
+}

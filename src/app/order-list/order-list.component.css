@@ -1,0 +1,13 @@
+
+:host /deep/ .ui-widget  {
+  font-family: 'Courgette', cursive!important;
+}
+:host /deep/  .ui-button{
+  margin-left: 7px;
+}
+:host /deep/ .ui-sidebar-close {
+  background-color: #31ffff;;
+}
+body .ui-sidebar .ui-sidebar-close {
+  color: #212121;
+}
